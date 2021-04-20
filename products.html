@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <script src="js.js" async></script>
+    <header id="header1">
+        <a href="/">Log-in</a>
+        <img src="images/download__1_-removebg-preview.png" alt="logo" id="logo">
+        <img src="images/download.jfif" alt="cart" onclick="cart_page()" id="cart">
+    <nav>
+        <ul>
+            <li>
+                <a href="#home" >Contact</a>
+            </li>
+            <li>
+                <a href="#home">Testimonies</a>
+            </li>
+            <li>
+                <a href="products.html">Products</a>
+            </li>
+            <li>
+                <a href="#home">Events</a>
+            </li>
+            <li>
+                <a href="#home">News</a>
+            </li>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            
+        </ul>
+    </nav>
+
+    </header>
+
+    <header id="header2">
+        
+            <input id="searchbar" type="text" onkeyup="search()" placeholder="Search products, brands and categories">
+            <button id="myBtn" onclick="go()" type="button"> search</button>
+        
+
+    </header>
+    <section id="section">
+
+        <div id="error">
+            <i class="material-icons">error_outline</i>
+            <p>Oops we could not find your search! Try another search.</p>
+            
+        </div>
+
+        <div id="categ">
+            <p><i class="material-icons">mood</i> &nbsp;Better Life</p>
+            <p><i class="material-icons">favorite_border</i> &nbsp;Cardiovascular Health</p>
+            <p><i class="material-icons">cloud</i> &nbsp;Digestive Health</p>
+            <p><i class="material-icons">security</i> &nbsp;Immune Booser</p>
+            <p><i class="material-icons">child_care</i> &nbsp;Baby Products</p>
+            <p><i class="fa fa-male"></i> &nbsp;Men Living</p>
+            <p><i class="fa fa-female"></i> &nbsp;Women Products</p>
+            <p><i class="material-icons">local_florist</i> &nbsp;Supplements</p>
+        </div>
+        <div id="banner"></div>
+        
+        <div id="help">
+            <p style="font-size: 20px; color: orange; text-align: center; padding: unset;"><span><i class="material-icons">help_outline</i></span>
+                <br>
+                <span>Help Center</span></p>
+            
+            <p><span>Contacts</span><br>
+            +254 7002000<br>
+            +254 7002000<br>
+            +254 7002000<br> <br>
+            <span>Email</span><br>
+            example@gmail.com <br><br>
+            <span>Adress</span> <br>
+            PO BOX 2021 <br>
+            Nairobi <br>
+            behind a building
+        </p>
+        </div>
+        <div id="strip">
+            <div class="top_shelf"><div class="cir" style="background: url(images/download\ \(9\).jfif) no-repeat 0 0; background-size: 200%;"></div><p> Fertility</p></div>
+            <div class="top_shelf"><div class="cir" style="background: url(images/download\ \(10\).jfif) no-repeat 0 0; background-size: cover;"></div><p>Beauty Care</p></div>
+            <div class="top_shelf"><div class="cir" style="background: url(images/download\ \(11\).jfif) no-repeat 0 0; background-size: cover;"></div><p>Mallaria</p></div>
+            <div class="top_shelf"><div class="cir" style="background: url(images/download\ \(12\).jfif) no-repeat 0 0; background-size: cover;"></div><p>HIV/AIDS</p></div>
+            <div class="top_shelf"><div class="cir" style="background: url(images/download\ \(14\).jfif) no-repeat 0 0; background-size: cover;"></div><p>immunity</p></div>
+        </div>
+
+        <div id="first_disp" class="display">
+            <div class="cat_descript"><p style="font-weight: bold; text-transform: uppercase;"> &nbsp;&nbsp;&nbsp;catergories</p></div>
+            <div class="box"><img src="images/download(1).JPG" alt="product">
+                <div class="descript_p"> 
+                 <p>
+                     <span style="font-weight: bolder;">Name of Drug</span> <br>
+                     <i>(description)</i> <br>
+                     <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+                </p>
+                    </div>
+            </div>
+            <div class="box"><img src="images/download.JPG" alt="product"><div class="descript_p"> 
+                <p>
+                    <span style="font-weight: bolder;">Name of Drug</span> <br>
+                    <i>(description)</i> <br>
+                    <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+               </p>
+                </div>
+            </div>
+            <div class="box"><img src="images/download(3).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name_test of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+            <div class="box"><img src="images/download(4).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+        </div>
+
+        <div class="display">
+            <div class="cat_descript"></div>
+            <div class="box"><img src="images/download(1).JPG" alt="product">
+                <div class="descript_p"> 
+                 <p>
+                     <span style="font-weight: bolder;">Name of Drug</span> <br>
+                     <i>(description 4 )</i> <br>
+                     <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+                </p>
+                    </div>
+            </div>
+            <div class="box"><img src="images/download.JPG" alt="product"><div class="descript_p"> 
+                <p>
+                    <span style="font-weight: bolder;">Name of Drug</span> <br>
+                    <i>(description test)</i> <br>
+                    <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+               </p>
+                </div>
+            </div>
+            <div class="box"><img src="images/download(3).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+            <div class="box"><img src="images/download(4).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+        </div>
+
+                
+        <div class="display">
+            <div class="cat_descript"></div>
+            <div class="box"><img src="images/download(1).JPG" alt="product">
+                <div class="descript_p"> 
+                 <p>
+                     <span style="font-weight: bolder;">Name of Drug</span> <br>
+                     <i>(description)</i> <br>
+                     <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+                </p>
+                    </div>
+            </div>
+            <div class="box"><img src="images/download.JPG" alt="product"><div class="descript_p"> 
+                <p>
+                    <span style="font-weight: bolder;">Name of Drug</span> <br>
+                    <i>(description)</i> <br>
+                    <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+               </p>
+                </div>
+            </div>
+            <div class="box"><img src="images/download(3).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+            <div class="box"><img src="images/download(4).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+        </div>
+
+                
+        <div class="display">
+            <div class="cat_descript"></div>
+            <div class="box"><img src="images/download(1).JPG" alt="product">
+                <div class="descript_p"> 
+                 <p>
+                     <span style="font-weight: bolder;">Name of Drug</span> <br>
+                     <i>(description)</i> <br>
+                     <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+                </p>
+                    </div>
+            </div>
+            <div class="box"><img src="images/download.JPG" alt="product"><div class="descript_p"> 
+                <p>
+                    <span style="font-weight: bolder;">Name of Drug</span> <br>
+                    <i>(description)</i> <br>
+                    <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+               </p>
+                </div>
+            </div>
+            <div class="box"><img src="images/download(3).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+            <div class="box"><img src="images/download(4).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+        </div>
+
+                
+        <div class="display">
+            <div class="cat_descript"></div>
+            <div class="box"><img src="images/download(1).JPG" alt="product">
+                <div class="descript_p"> 
+                 <p>
+                     <span style="font-weight: bolder;">Name of Drug</span> <br>
+                     <i>(description)</i> <br>
+                     <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+                </p>
+                    </div>
+            </div>
+            <div class="box"><img src="images/download.JPG" alt="product"><div class="descript_p"> 
+                <p>
+                    <span style="font-weight: bolder;">Name of Drug</span> <br>
+                    <i>(description)</i> <br>
+                    <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+               </p>
+                </div>
+            </div>
+            <div class="box"><img src="images/download(3).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+            <div class="box"><img src="images/download(4).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+        </div>
+
+                
+        <div class="display">
+            <div class="cat_descript"></div>
+            <div class="box"><img src="images/download(1).JPG" alt="product">
+                <div class="descript_p"> 
+                 <p>
+                     <span style="font-weight: bolder;">Name of Drug</span> <br>
+                     <i>(description)</i> <br>
+                     <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+                </p>
+                    </div>
+            </div>
+            <div class="box"><img src="images/download.JPG" alt="product"><div class="descript_p"> 
+                <p>
+                    <span style="font-weight: bolder;">Name of Drug</span> <br>
+                    <i>(description)</i> <br>
+                    <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+
+               </p>
+                </div>
+            </div>
+            <div class="box"><img src="images/download(3).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+            <div class="box"><img src="images/download(4).JPG" alt="product">
+                <div class="descript_p"> 
+                    <p>
+                        <span style="font-weight: bolder;">Name of Drug</span> <br>
+                        <i>(description)</i> <br>
+                        <span style="font-weight: bold; color:rgb(255, 81, 0) ;">Price: /=</span>
+   
+                   </p>
+                       </div>
+                    </div>
+        </div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<base href="https://www.bfsuma.com/BFWebsite_E/">
+
+    <meta charset="utf-8" />
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Products detail</title>
+		<LINK REL="SHORTCUT ICON" HREF="img/bfsuma.ico">
+		<link href="css/base.css?v=01" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+		<link href="css/idangerous.swiper2.7.6.css" rel="stylesheet">
+		<link href="../dt/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/product_detail.css" rel="stylesheet"/>
+		<script src="/assets/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/gtag.js"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-101492457-1');
+		</script>
+  </head>
+
+<body>
+		<!--顶部链接和搜索框-->
+    <!--顶部-->
+    <div class="top-minw">
+        <div class="top">
+            <div class="lang-search fr">
+                <ul class="language fl">
+                    <li class="my_top1">
+                        <a href="/dt/index.html#/login">Login</a>
+                        <span class="top_border">|</span>
+                        <a href="/dt/index.html">Register</a>
+                    </li>
+                    
+                    <li class="my_top2" style="display:none">
+                        <span>Hello, </span>
+                        <span class="user_name" style="cursor:pointer;color:#5BA2CC"></span>
+                        <span>, Welcome to BF Suma</span>
+                        <a style="margin: 0;" id="exit">
+                            <img src="../dt/img_new/exit.png" alt="" style="width: 14px;">
+                            Exit
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i class="glyphicon glyphicon-remove-sign"></i>
+                        <i class="glyphicon glyphicon-ok-sign"></i>
+                        <i class="glyphicon glyphicon-question-sign" style="color: #d04848;"></i>
+                        <div class="modal_text"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-lg primary_btn" data-dismiss="modal"
+                                id="login_success">sure
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg primary_btn" data-dismiss="modal"
+                                id="login_fail">sure
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg primary_btn" data-dismiss="modal"
+                                id="login_sure">sure
+                        </button>
+                        <button type="button" class="btn btn-lg primary_btn" data-dismiss="modal"
+                                id="login_cancel">cancel
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <script type="text/javascript">
+        $(function () {
+            if (sessionStorage && sessionStorage.getItem('user')) {
+                var user = JSON.parse(sessionStorage.getItem('user'));
+                $(".my_top2 .user_name").text(user.name);
+                $(".my_top2 .user_name").click(function(){
+                    if (user.userType == "customer") {
+                        window.location.href = '/dt/index.html#/register/distributor/personal';
+                    } else {
+                        window.location.href = 'http://report.bfsuma.com/jsp/infoPersonal.jsp';
+                    }  
+                })
+                $(".my_top1").hide();
+                $(".my_top2").show();
+            } else {
+                $(".my_top1").show();
+                $(".my_top2").hide();
+            }
+        });
+    
+        $('#exit').on('click', function () {
+        $('.modal_text').text('Are you sure to exit？');
+        $('.glyphicon-question-sign, #login_sure, #login_cancel').show();
+        $('.glyphicon-remove-sign, .glyphicon-ok-sign, #login_success, #login_fail').hide();
+        $('#myModal').modal('show');
+    });
+
+    $('#login_sure').on('click', function () {
+        sessionStorage.removeItem('user');
+        window.location.href = '/';
+    });
+    </script>
+		<div class="index-nav-minw">
+			<div class="index-nav" >
+				<div class="logo fl"><a href="/en"><img src="img/logo.png"></a></div>
+				<ul class="nav fr" id="topNav">
+                    <li ><a><span>NMN</span></a>
+                        <ul class="second-nav">
+                            <li><a href="/nmnBfsuma/en">NMN × BF Suma</a></li>
+                            <li><a href="/nmnGlobalVision/en">NMN Global Vision</a></li>
+                            <li><a href="/nmnBetterLife/en">NMN Better Life</a></li>
+                            <li><a href="/nmnLaboratory/en">NMN Laboratory</a></li>
+                        </ul>
+                    </li>
+					<li><a href="/allNews/en"><span>News and Activities</span></a>
+						<ul class="second-nav">
+							<li><a href="/allNews/en">News</a></li>
+							<li><a href="/allActivity/en">Activities</a></li>
+						</ul>
+					</li>
+					<li><a href="/our_company/en"><span>About BF Suma</span></a>
+						<ul class="second-nav">
+							<li><a href="/our_company/en">Our Company</a></li>
+							<li><a href="/our_value/en">Our Value</a></li>
+							<li><a href="/milestone/en">Milestone</a></li>
+							<li><a href="/our_achievement/en">Our Achievements</a></li>
+						</ul>
+					</li>
+					<li><a href="/products/en?cateId=&rownum="><span>Products</span></a>
+						<ul class="second-nav" id="cateMain">
+					
+						</ul>
+					</li>
+					<li><a href="/submit/en"><span>Start a Business</span></a>
+						<ul class="second-nav">
+							<li><a href="/why_suma/en">Why BF Suma</a></li>
+							<li><a href="/what_suma/en">BF Suma Business</a></li>
+							<li><a href="/dt/index.html">Register Now</a></li>
+						</ul>
+					</li>
+                    <li><a><span>Hall of Fame</span></a>
+                        <ul class="second-nav">
+							<li><a href="/allStories/en">Life Change Stories</a></li>
+                        </ul>
+                    </li>
+					<li><a href="/contact_us/en"><span>Contact Us</span></a>
+						<ul class="second-nav">
+							<li><a href="/contact_us/en">Contact Us</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+		
+		<!--小标题导航-->
+		<div class="subnav-bg">
+			<div class="subnav">
+				<div class="fl">Products</div>
+				<div class="fr">
+					<a href="/en">HOME</a>
+					<i>/</i>
+					<a href="/products/en?cateId=&rownum=">Products</a>
+					<i class="my_subtitle">/</i>
+					<a class="my_subtitle my_subtitle_name"></a>
+				</div>
+			</div>
+		</div>
+		<div class="all-news-bg">
+			 <div class="all-news">
+				<ul class="sidebar fl">
+					<span class="first"><a href="/products/en?cateId=&rownum=">Products</a></span>
+						 <li><a class="my_side" href="/products/en?cateId=50&rownum=1">Premium Selected</a></li>
+						 <li><a class="my_side" href="/products/en?cateId=51&rownum=2">Better life</a></li>
+						 <li><a class="my_side" href="/products/en?cateId=3&rownum=3">Bone & Joint Care</a></li>
+						 <li><a class="my_side" href="/products/en?cateId=6&rownum=4">Cardiovascular Health</a></li>
+						 <li><a class="my_side" href="/products/en?cateId=5&rownum=5">Digestive Health</a></li>
+						 <li><a class="my_side" href="/products/en?cateId=4&rownum=6">Immune Booster</a></li>
+						 <li><a class="my_side" href="/products/en?cateId=10&rownum=7">Suma Baby</a></li>
+						 <li><a class="my_side" href="/products/en?cateId=45&rownum=8">Suma Living</a></li>
+				</ul>
+				<div class="all-news-content fr">
+					<div class="achievement">
+						<div class="product_describe">
+							<div class="product_show"><img src=""></div>
+							<div class="product_font">
+								<p></p>
+								<div class="evaluate_star">
+									<!--<div class="grade-star"><div class="gs5"></div></div>
+									<span class="grade_num">5.0</span>-->
+								</div>	
+								<ul class="product_words">
+									
+								</ul>
+							</div>
+						</div>
+						<!--产品详情标题-->
+						<!--<div class="change" style="display: none;">
+							<a class="c-details home"></a>
+						</div>-->
+						<!--产品详情-->
+						<div class="product_detail">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div style="display:none" id="rownum"></div>
+		
+	<script id="renderProductsMain" type="text/x-jsrender">
+		<a>
+			<div><img src="{{:titleImg}}"></div>
+			<div>
+				<span>{{:productName}} </span>
+				<p>{{:prodDesc}}</p>
+			</div>
+		</a>
+	</script>	
+		
+
+
+	<!--底部-->
+	<div style="overflow: hidden;">
+		<div >
+			<div style="float: left;width: 31.4%;height:100%;margin: 1% 1%;">
+				<a href="https://youtube.com/playlist?list=PLfi2sC69-SlHieu7vMWEoR16GClD2f_B3" target="_blank"><img style="height: 100%;width: 100%;" src="img/bottom1.jpg"></a>
+
+			</div>
+			<div style="float: left;width: 31.2%;height: 100%;margin: 1% 1%;">
+				<a  href="https://youtube.com/playlist?list=PLfi2sC69-SlFGE2fYojI2KZtCf-nSu4_6" target="_blank"><img style="height: 100%;width: 100%;" src="img/bottom2.jpg"></a>
+			</div>
+			<div style="float: left;width: 31.4%;height: 100%;margin: 1% 1%;">
+				<a  href="https://youtu.be/aXzFfmNy__0" target="_blank"><img style="height: 100%;width: 100%;" src="img/bottom3.jpg"></a>
+			</div>
+    	</div>
+	</div>
+	<div class="color_line"><img src="img/color_line.png"></div>
+	<div class="footer-bg" style="background-color: #F5F5F5">
+		<div class="footer" >
+			<div class="fl logo-icon">
+				<div class="logo1"><img src="img/logo.png"></div>
+				<div class="logo-icon-font" style="color: #545151">This information is intended only for residents of Countries to which BF Suma products are supplied. The products discussed here may have different product labeling in different countries. Product compositions may be adjusted in different countries.</div>
+				<div class="code1">
+					<img src="img/logo1.png">
+					<img src="img/logo2.png">
+					<img src="img/logo3.png">
+					<img src="img/logo4.png">
+				</div>
+			</div>
+			<div class="fl info_center" style="width: 220px">
+				<p style="color: #0a0a0a" >Info Center</p>
+				<div style="float:left">
+                    <ul>
+                        <li><a href="https://www.facebook.com/BFSumaOfficial/" target="_blank"><img src="img/logo6.png"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCGXutL4m4ZUUZNj9nAR-4qA" target="_blank"><img src="img/logo7.png"></a></li>
+                        <li><a href="https://twitter.com/BFSUMAOFFICIAL" target="_blank"><img src="img/logo10.jpg"></a></li>
+                    </ul>
+				</div>
+                <div style="float:right">
+                <ul>
+                    <li><a href="https://www.instagram.com/bfsumaofficial/" target="_blank"><img src="img/logo11.png"></a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.bf.brightfuture" target="_blank"><img src="img/logo8.png"></a></li>
+                    <li><a href="https://itunes.apple.com/us/app/touchbfsuma-bright-life-better-future/id1042951296?l=zh&amp;ls=1&amp;mt=8" target="_blank"><img src="img/logo9.png"></a></li>
+                </ul>
+                </div>
+			</div>
+			<div class="fl connect_suma">
+				<p style="color: #0a0a0a">Connect with BF Suma</p>
+				<i id="ourOffices" data-url="/contact_us/en" style="cursor:pointer; color: #4a4a4a">Our Offices</i>
+				<!-- <div class="phone">1-626-287-4700</div>-->
+				<div class="email"  style="color: #4a4a4a">info@bfsuma.com</div>
+			</div>
+		</div>
+  </div>
+  <div class="brand">
+  	<p>Copyright @ 2016 Bright Future Pharmaceutical Laboratories Limited. All Rights Reserved.</p>
+  </div>
+
+        <div class="share_web">
+            <div class="share_a bshare-custom icon-medium-plus">
+				<a title="LinkedIn" class="bshare-linkedin " ></a>
+				<a title="Facebook" class="bshare-facebook "></a>
+				<a title="Twitter" class="bshare-twitter "></a>
+            </div>
+            <p class="share_title">share</p>
+		</div>
+
+    
+</body>
+	<script id="renderCateMain" type="text/x-jsrender">
+		<li><a href="/products/en?cateId={{:cateId}}&rownum={{:rownum}}">{{:cateName}}</a></li>
+	</script>		
+	<script type="text/javascript" src="/js/third/jsrender.js"></script>
+	<script type="text/javascript" src="/js/third/jquery.twbsPagination.js"></script>
+	<script type="text/javascript" src="/js/third/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/base.js"></script>
+	<script type="text/javascript" src="js/master.js"></script>
+	<script type="text/javascript" src="js/share.js"></script>
+  <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=en"></script>
+  <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+  	<script type="text/javascript"> bShare.init(); </script>
+	  <script type="text/javascript">
+						$("#topNav").children().eq(3).children().eq(0).addClass("curr");
+	    			</script>	
+						<script type="text/javascript" src="js/product_detail.js"></script>
+</html>
+
