@@ -38,25 +38,40 @@ nav {
 
 nav {
     width: 70%;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 #header1 nav ul li {
     float: right;
-    padding-bottom: 1px;
+    padding-bottom: 5px;
     text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 20px;
+    padding-left: 3%;
+    padding-right: 1%;
     list-style: none;
-    padding-top: 10px;
+    padding-top: 5px;
+    transition: ease-in 0.2s;
+    width: unset;
 }
 
 #header1 nav ul li a {
     float: none;
     margin-top: 20px;
     color: black;
-    text-decoration: none;
+}
+
+/*#header1 nav a:active {
+    border: 1px solid red;
+}*/
+
+#header1 nav li:hover {
+    border-radius: 50px;
+    background: rgb(165, 97, 42, 0.6);
+    font-weight: bold;
+    padding-top: 10px;
+    margin-top: -5px;
+    padding-bottom: 10px;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
 }
 
 #header2 {
